@@ -1,0 +1,201 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts and Colors */
+body {
+    font-family: "Times New Roman", serif;
+    color: #333;
+    background: url('crinkled-paper-bg.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 3px solid black;
+    background-color: #fff; /* Fully opaque white background */
+    position: sticky; /* Makes the header stick */
+    top: 0; /* Sticks to the top of the page */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+header h1 {
+    font-family: "Georgia", serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #555;
+}
+
+#date-container {
+    font-size: 0.9em;
+    color: #444;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #ddd;
+    padding: 10px 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+/* Content Container */
+.content-container {
+    display: flex; /* Arrange boxes side by side */
+    justify-content: space-between; /* Space between the left and right boxes */
+    align-items: flex-start; /* Align boxes at the top */
+    width: 80%; /* Overall width of the container */
+    margin: 20px auto; /* Center the container on the page */
+    gap: 20px; /* Add space between the two boxes */
+}
+
+/* Left Box: Editor's Column */
+#about {
+    flex: 1; /* Take up remaining space on the left */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Box: Contact Me */
+#contact-sidebar {
+    flex: 0 0 300px; /* Fixed width for the Contact Me box */
+    background: rgba(255, 255, 255, 0.9); /* Match the style of the other box */
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align the content */
+}
+
+/* Sidebar Title */
+#contact-sidebar h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-family: "Georgia", serif;
+}
+
+/* Sidebar Links */
+#contact-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#contact-sidebar ul li {
+    margin: 10px 0;
+}
+
+#contact-sidebar ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+#contact-sidebar ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky About Me Section */
+#about {
+    position: sticky; /* Makes the About Me section stick */
+    top: 80px; /* Adjust to stick below the header */
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+    padding: 15px;
+    border: 1px solid #ccc;
+    z-index: 900; /* Ensures it stays above other elements but below the header */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-family: "Georgia", serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+article {
+    margin: 20px 0;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+article h3 {
+    font-size: 1.5em;
+}
+
+article p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Stock Prices Section */
+#stocks ul {
+    list-style: none;
+    padding: 0;
+}
+
+#stocks ul li {
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9em;
+}

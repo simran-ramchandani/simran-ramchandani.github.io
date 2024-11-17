@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily [Your Name]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>The Daily [Your Name]</h1>
+            <p class="tagline">"All the News Fit to Print... About Me!"</p>
+            <div id="date-container"></div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+        <div class="content-container">
+            <!-- Left Box: Editor's Column -->
+            <section id="about">
+                <h2>Editor's Column</h2>
+                <p>Welcome to my personal website! Here you'll find everything about me, my work, and my passions.</p>
+            </section>
+            <section id="stocks">
+                <h2>Stock Prices</h2>
+                <p>Here's the "market performance" of my life:</p>
+                <ul>
+                    <li>Creativity Index: <strong>+12%</strong></li>
+                    <li>Productivity Stocks: <strong>Holding Steady</strong></li>
+                    <li>Coding Mastery Fund: <strong>+8% this week</strong></li>
+                </ul>
+            </section>
+            <section id="portfolio">
+                <h2>Featured Stories</h2>
+                <article>
+                    <h3>Project 1: Amazing App</h3>
+                    <p>A description of one of your projects goes here. Highlight its purpose and your contributions.</p>
+                </article>
+                <article>
+                    <h3>Project 2: Creative Campaign</h3>
+                    <p>A brief write-up about another project. Use this space to showcase your skills!</p>
+                </article>
+            </section>
+            <section id="blog">
+                <h2>Latest Articles</h2>
+                <article>
+                    <h3>Title of Blog Post</h3>
+                    <p>A short excerpt or intro about the blog post. Click to read more!</p>
+                </article>
+            </section>
+            <section id="contact">
+                <h2>Classifieds</h2>
+                <p>If you'd like to get in touch, feel free to send me a message!</p>
+                <button>Contact Me</button>
+            </section>
+        
+            <!-- Right Box: Contact Me -->
+            <aside id="contact-sidebar">
+                <h2>Contact Me</h2>
+                <ul>
+                    <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://x.com/yourusername" target="_blank">X (Twitter)</a></li>
+                    <li><a href="mailto:your.email@example.com">Email</a></li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 The Daily [Your Name]. All rights reserved.</p>
+    </footer>
+    <script>
+        // Add today's date dynamically
+        const dateContainer = document.getElementById('date-container');
+        const today = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateContainer.textContent = today.toLocaleDateString(undefined, options);
+    </script>
+</body>
+</html>
