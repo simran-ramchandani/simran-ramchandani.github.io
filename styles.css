@@ -19,16 +19,16 @@ header {
     text-align: center;
     padding: 20px 10px;
     border-bottom: 3px solid black;
-    background-color: #fff; /* Fully opaque white background */
-    position: sticky; /* Makes the header stick */
-    top: 0; /* Sticks to the top of the page */
-    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
-    font-family: "Georgia", serif;
+    font-family: "Lora", serif;
+    font-style: italic;
     font-size: 3em;
-    text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 5px;
 }
@@ -45,16 +45,24 @@ header h1 {
 }
 
 /* Navigation */
+/* Navigation */
+nav {
+    position: sticky;
+    top: 178px; /* Adjust this value based on your header height */
+    z-index: 999; /* Just below the header's z-index */
+    background: #ddd;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background: #ddd;
     padding: 10px 0;
     border-top: 1px solid #999;
     border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+    background: inherit;
 }
-
 nav ul li {
     margin: 0 15px;
 }
@@ -69,60 +77,101 @@ nav ul li a:hover {
     color: #000;
     text-decoration: underline;
 }
-/* Content Container */
+
+/* Main Content Layout */
 .content-container {
-    display: flex; /* Arrange boxes side by side */
-    justify-content: space-between; /* Space between the left and right boxes */
-    align-items: flex-start; /* Align boxes at the top */
-    width: 80%; /* Overall width of the container */
-    margin: 20px auto; /* Center the container on the page */
-    gap: 20px; /* Add space between the two boxes */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 250px; /* Reduced sidebar width */
+    gap: 30px;
+    padding: 20px;
 }
 
-/* Left Box: Editor's Column */
-#about {
-    flex: 1; /* Take up remaining space on the left */
+/* Left Content Styles */
+.left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Right Box: Contact Me */
+/* Section Styles */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-family: "Georgia", serif;
+    font-size: 1.8em;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Stocks Section */
+#stocks ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+#stocks ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Featured Stories and Blog Articles */
+article {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+article:first-of-type {
+    margin-top: 15px;
+    padding-top: 0;
+    border-top: none;
+}
+
+article h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Contact Sidebar */
 #contact-sidebar {
-    flex: 0 0 300px; /* Fixed width for the Contact Me box */
-    background: rgba(255, 255, 255, 0.9); /* Match the style of the other box */
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center align the content */
+    position: sticky;
+    top: 240px;
+    height: fit-content;
 }
 
-/* Sidebar Title */
 #contact-sidebar h2 {
     font-size: 1.5em;
     border-bottom: 2px solid black;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     margin-bottom: 15px;
-    font-family: "Georgia", serif;
 }
 
-/* Sidebar Links */
 #contact-sidebar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 #contact-sidebar ul li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 #contact-sidebar ul li a {
     text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
     color: #333;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
@@ -131,71 +180,22 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main Content */
-main {
-    padding: 20px;
-    width: 80%;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Sticky About Me Section */
-#about {
-    position: sticky; /* Makes the About Me section stick */
-    top: 80px; /* Adjust to stick below the header */
-    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
-    padding: 15px;
-    border: 1px solid #ccc;
-    z-index: 900; /* Ensures it stays above other elements but below the header */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Sections */
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-family: "Georgia", serif;
-    font-size: 2em;
-    margin-bottom: 10px;
-    border-bottom: 2px solid black;
-    padding-bottom: 5px;
-}
-
-article {
-    margin: 20px 0;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-}
-
-article h3 {
-    font-size: 1.5em;
-}
-
-article p {
-    font-size: 1em;
-    color: #555;
-}
-
-/* Stock Prices Section */
-#stocks ul {
-    list-style: none;
-    padding: 0;
-}
-
-#stocks ul li {
-    font-size: 1.1em;
-    color: #444;
-}
-
 /* Footer */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background: #333;
     color: #fff;
-    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        grid-template-columns: 1fr;
+    }
+    
+    #contact-sidebar {
+        position: static;
+    }
 }
